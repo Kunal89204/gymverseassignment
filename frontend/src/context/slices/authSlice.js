@@ -12,7 +12,7 @@ export const createAuthSlice = (set) => ({
             if (!localStorage.getItem('userState')) {
 
                 localStorage.setItem('userState', JSON.stringify(userData));
-                axios.post(`${import.meta.env.VITE_BACKEND_URI}/auth`, {
+                axios.post(`https://gymverseassignment.onrender.com/auth`, {
                     authId: userData.id,
                     fullname: userData.fullName,
                     email: userData.emailAddresses[0].emailAddress,
