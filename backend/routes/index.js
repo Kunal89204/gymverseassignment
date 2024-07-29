@@ -3,14 +3,6 @@ var router = express.Router();
 const User = require("./users")
 
 /* GET home page. */
-router.get("/", async (req, res) => {
-  try {
-    const data  = await User.find()
-    res.json(data)
-  } catch (error) {
-    console.log(error)
-  }
-})
 
 
 router.post("/auth", async (req, res) => {
