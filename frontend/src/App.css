@@ -1,0 +1,331 @@
+/* write your css here */
+.App {
+  text-align: center;
+  background: linear-gradient(to bottom, 
+  #f0f4f8 0%,    /* Lighter color at the top */
+  #c7def3 40%,   /* Slightly darker color in the middle */
+  #ffffff 100%   /* White color at the bottom */
+);
+}
+
+.App-header {
+  background: linear-gradient(to bottom, 
+  #f0f4f8 0%,    /* Lighter color at the top */
+  #c7def3 40%,   /* Slightly darker color in the middle */
+  #ffffff 100%   /* White color at the bottom */
+);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+}
+
+.doctor-image {
+  max-width: 40%;
+  height: auto;
+}
+
+.hero-text {
+  max-width: 50%;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: grey;
+}
+
+
+.book-now-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.2em;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.book-now-btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 0 10px rgba(0, 91, 187, 0.7);
+}
+
+.book-now-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.75s;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.book-now-btn:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.book-now-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.features {
+  margin-top: 20px;
+
+  justify-content: space-between;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+
+
+}
+
+.feature span {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.aidiv{
+background-color: #f0f4f8;
+
+}  
+
+.aihead{
+font-weight: bolder;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size:xxx-large;
+color:#0056b3;
+margin-top: 6rem;
+}
+
+
+.aisubhead{
+font-family: cursive;
+font-size: larger;
+margin-top: 2rem;
+color: grey;
+
+}
+.aibtn {
+  background-color: black;
+  color:rgb(118, 235, 8) ;
+  margin-top:2rem ;
+ margin-bottom: 5rem;
+  border: 2px solid rgb(118, 235, 8);
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.aibtn:hover {
+  background-color: #3a8ddb;
+  color: #f0f4f8;
+  transform: scale(1.05);
+}
+
+.aibtn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+}
+
+.aibtn:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.aibtn.pulse {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+}
+body {
+font-family: 'Josefin Sans';
+background: linear-gradient(to right, #FFFAFB, #EBF8FF);
+
+}
+
+* {
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+
+}
+
+::-webkit-scrollbar {
+width: 0px;
+}
+
+.right-arrow,
+.left-arrow {
+cursor: pointer;
+background: transparent;
+outline: none;
+border: none;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #FF2625;
+font-size: 25px;
+border-radius: 4px;
+position: absolute;
+bottom: -20px;
+right: 80px;
+transform: scale(1, 1);
+transition: 0.3s all ease-in-out;
+}
+
+.right-arrow {
+right: 160px;
+}
+
+.right-arrow:hover,
+.left-arrow:hover {
+transform: scale(1.3, 1.3);
+}
+
+.react-horizontal-scrolling-menu--wrapper {
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+}
+
+.detail-image {
+width: 729px;
+height: 742px;
+}
+
+.hero-banner-img {
+position: absolute;
+right: 40px;
+top: 0px;
+width: 700px;
+height: 900px;
+margin-top: -330px;
+
+}
+
+.exercise-card {
+width: 400px;
+height: 445px;
+background: #fff;
+border-top: 4px solid #FF2625;
+border-bottom-left-radius: 20px;
+text-decoration: none;
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+padding-bottom: 10px;
+transform: scale(1, 1);
+transition: 0.3s all ease-in-out;
+}
+
+.exercise-card img {
+height: 326px;
+}
+
+.bodyPart-card {
+transform: scale(1, 1);
+transition: 0.3s all ease-in-out;
+}
+
+.exercise-card:hover,
+.bodyPart-card:hover {
+transform: scale(1.1, 1.1);
+}
+
+.search-btn:hover {
+color: #FF2625 !important;
+border: 1px solid #FF2625 !important;
+}
+
+.exercise-video {
+display: flex;
+flex-direction: column;
+gap: 24px;
+width: 387px;
+height: 381px;
+text-decoration: none;
+}
+
+@media screen and (max-width:1200px) {
+.detail-image {
+  width: 300px;
+  height: 300px;
+}
+
+
+.react-horizontal-scrolling-menu--scroll-container {
+  width: 500px;
+}
+
+.left-arrow,
+.right-arrow {
+  position: static !important;
+}
+
+.hero-banner-img {
+  display: none;
+}
+
+.exercise-card {
+  width: 320px;
+}
+
+.exercise-video {
+  width: 320px;
+  height: 300px;
+}
+
+}
+
+@media screen and (max-width:400px) {
+.exercise-card {
+  width: 280px;
+}
+}
+
