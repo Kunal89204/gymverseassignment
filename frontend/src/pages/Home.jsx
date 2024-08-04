@@ -177,7 +177,7 @@ export default function Home() {
           <Text fontSize="lg" color="gray.600" mb={6}>
             Get expert medical advice anytime, anywhere. Fast, reliable, and secure medical consultations at your fingertips.
           </Text>
-          <Link href="/Aibot" isExternal>
+          <Link to="/Aibot" isExternal>
             <Button
               colorScheme="blue"
               size="lg"

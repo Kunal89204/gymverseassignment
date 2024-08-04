@@ -1,18 +1,29 @@
-// src/App.js
 import React, { useEffect } from 'react';
 import { FaRobot } from 'react-icons/fa';
 
 function Aibot() {
   useEffect(() => {
-    window.botpressWebChat.init({
-      hostUrl: 'https://cdn.botpress.cloud/webchat/v1',
-      botId: 'ec423b6c-8765-493e-9757-20361c5290a1',
-      messagingUrl: 'https://messaging.botpress.cloud',
-    });
+    const script = document.createElement('script');
+    script.src = 'https://cdn.botpress.cloud/webchat/v1';
+    script.async = true;
+    script.onload = () => {
+      if (window.botpressWebChat) {
+        window.botpressWebChat.init({
+          hostUrl: 'https://cdn.botpress.cloud/webchat/v1',
+          botId: 'ec423b6c-8765-493e-9757-20361c5290a1',
+          messagingUrl: 'https://messaging.botpress.cloud',
+        });
+      }
+    };
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen  bg-gradient-to-r from-blue-50 to-blue-400">
+    <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-blue-50 to-blue-400">
       <header className="text-center mb-4">
         <h1 className="text-3xl font-bold text-gray-800">Welcome to our Chatbot</h1>
         <p className="text-gray-600 text-xl">Start your conversation with a HI!</p>

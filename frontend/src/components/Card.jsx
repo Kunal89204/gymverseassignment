@@ -25,6 +25,7 @@ const Card = ({ title, text }) => {
       flexDirection="column"
       alignItems="center"
       transition="transform 0.3s, box-shadow 0.3s"
+      minHeight={'245px'}
       _hover={{
         transform: 'scale(1.05)',
         boxShadow: 'lg',
