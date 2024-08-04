@@ -106,6 +106,7 @@ export default function News() {
               bg="white"
               borderRadius="xl"
               boxShadow="lg"
+              minHeight={'472px'}
               overflow="hidden"
               transition="all 0.3s ease"
               _hover={{ boxShadow: "2xl", transform: "scale(1.02)" }}
@@ -113,6 +114,7 @@ export default function News() {
               display="flex"
               flexDirection="column"
               alignItems="center"
+              h="100%"
             >
               <Image
                 src={element.image}
@@ -127,14 +129,14 @@ export default function News() {
                 <Heading as="h3" size="md" color="blue.600" noOfLines={2}>
                   {element.title}
                 </Heading>
-                <Text color="gray.600" noOfLines={3}>
+                <Text color="gray.600" noOfLines={3} overflow="hidden" textOverflow="ellipsis" >
                   {element.description}
                 </Text>
-                <Flex justify="space-between" align="center" width="full">
-                  <Text color="gray.500" fontSize="sm">
+                <Flex justify="space-between" align="unset" width="full">
+                  <Text color="gray.500" fontSize="xs">
                     {element.date} | {element.source}
                   </Text>
-                  <Link href={element.link} isExternal color="blue.500" fontWeight="bold" display="flex" alignItems="center">
+                  <Link href={element.link} isExternal color="blue.500" fontWeight="bold" display="flex" alignItems="center" fontSize={'sm'}>
                     Read more <ArrowForwardIcon ml={1} />
                   </Link>
                 </Flex>

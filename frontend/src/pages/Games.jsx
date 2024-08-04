@@ -44,7 +44,7 @@ const Games = () => {
           Discover our fun and exciting games designed to keep you entertained for hours. Choose your game and start playing now!
         </Text>
         <Flex direction={isMobile ? 'column' : 'row'} gap={4} align="center">
-          <Link href="/Memory" isExternal>
+          <Link href="/Memory" isExternal target='_self'>
             <Button
               colorScheme="yellow"
               size="lg"

@@ -116,11 +116,11 @@ export default function Home() {
         <Spinner />
       </div>
 
-      <div>
+      <div id='virtualGym'>
         <Fit />
       </div>
 
-      <div className=' '>
+      <div className=' ' id='games'>
         <Games />
       </div>
       <SimpleGrid
@@ -131,22 +131,30 @@ export default function Home() {
         borderRadius="lg"
         boxShadow="md"
       >
-        <Card
+       <a href="#games">
+       <Card
           title="Games"
           text="Explore fun and interactive games to stay active and engaged."
         />
-        <Card
+       </a>
+       <a href="#virtualGym">
+       <Card
           title="Virtual Gym"
           text="Access virtual gym sessions for personalized workouts."
         />
-        <Card
+       </a>
+       <a href="#fitnessTracker">
+       <Card
           title="Fitness Tracker"
           text="Track your fitness progress and set goals with our integrated tracker."
         />
-        <Card
+       </a>
+       <a href="#chatBot">
+       <Card
           title="AI Bot"
           text="Interact with our AI bot for personalized health and fitness advice."
         />
+       </a>
       </SimpleGrid>
 
 
@@ -160,6 +168,7 @@ export default function Home() {
         borderRadius="md"
         boxShadow="md"
         minH="400px"
+        id='chatBot'
       >
         <Box textAlign={isMobile ? 'center' : 'left'}>
           <Heading as="h2" size="xl" color="gray.800" mb={4}>
