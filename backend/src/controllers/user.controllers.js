@@ -1,13 +1,9 @@
-var express = require('express');
-var router = express.Router();
-const User = require("./users")
-
-/* GET home page. */
+const User = require('../models/user.model')
 
 
-router.post("/auth", async (req, res) => {
-  try {
-    const { authId, fullname, email } = req.body;
+const userAuth = async (req, res) => {
+    try {
+        const { authId, fullname, email } = req.body;
 
     // Validate request body
     if (!authId || !email) {
@@ -38,10 +34,24 @@ router.post("/auth", async (req, res) => {
         user: newUser,
       });
     }
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Server error', error });
-  }
-});
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Server error', error });
+    }
+}
 
-module.exports = router;
+
+const getUsers = async (req, res) => {
+    try {
+        const data = await User.find()
+        res.json(data)
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+module.exports = {
+    userAuth,
+    getUsers
+}
